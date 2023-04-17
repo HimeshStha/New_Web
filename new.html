@@ -2,93 +2,150 @@
 <html lang="en">
 
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="mystyle.css" type="text/css">-->
+
     <style>
-      body {
-        background-color: #3F2F3A;
-        padding: 0;
-        margin: 0;
+      * {}
 
+      h1 {}
+
+
+      p {}
+
+      .box1 {
+        color: skyblue;
       }
 
-      .container {
-        margin: auto;
-        display: block;
-        margin-top: 8%;
-        width: 600px;
-        height: 400px;
-
+      .box1 h1 {
+        /*color: red;*/
       }
 
-      .cup {
-        position: absolute;
-        border-radius: 0 0 25px 25px;
-        width: 40%;
-        height: 70%;
-        top: 12.5%;
-        left: 25%;
-        background: gray;
-        border: 5px solid gray;
-        border-top: none;
-        border-bottom: 15px solid;
-        rgba(255, 255, 255, 0.25) position: relative;
-        box-sizing: border-box;
-        overflow: hidden;
+      .box2 {
+        color: tan;
       }
 
-      .cup-liquid {
-        position: absolute;
-        position: relative;
-        background: #f17b3f;
-        box-shadow: inset 0 0 50px;
-        rgba(0, 0, 0, .5) transition: 0.5s;
-        border-radius: 0 0 5% 5% width: 100;
-        height: 100%;
-        top: 0% left: 0%;
-      }
-
-      .cup-liquid:before,
-      .cup-liquid:after {
-        content: "";
-        width: 200%;
-        height: 200%;
-        position: absolute;
-        top: 15%;
-        left: 30%;
-        background: #000;
-      }
-
-      .cup-liquid:before {
-        border-radius: 45%;
-        background: rgba(255, 255, 255, 1);
-        background: rgba(63, 47, 58, 1);
-        animation: animate 5s linear infinite;
-      }
-
-      .cup-liquid:after {
-        border-radius: 40%;
-        background: rgba(255, 255, 255, 5);
-        background: rgba(63, 47, 58, 5);
-        animation: animate 10s linear infinite;
-      }
-
-      @keyframes animate {
-        0% {
-          transform: translate(-50%, -75%) rotate(0deg);
-        }
-
-        100% {
-          transform: translate(-50%, -75%) rotate(360deg);
-        }
+      #head h1 {
+        color: red;
       }
     </style>
 
-    <title>Document</title>
+    <style>
+      .box+p {
+        color: tomato;
+      }
+
+      .box:hover {
+        background-color: green;
+      }
+
+      .box>h1 {
+        color: blueviolet;
+      }
+
+      .box3>h1 {
+        color: chocolate;
+      }
+
+      li:first-child {
+        color: violet;
+      }
+
+      li:last-child {
+        color: lightcoral;
+      }
+
+      li:nth-child(3) {
+        color: peru;
+      }
+
+      li:nth-child(even) {}
+
+      li:nth-child(odd) {}
+
+      li:nth-child(2n+1) {}
+
+      .paray p:hover:before {
+        content: 'Hio';
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .paray p::after {
+        content: 'Lio';
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+
+
+
   </head>
 
   <body>
-    <div class="container"> </div>
-    <div class="cup"></div>
-    <div class="cup-liquid"></div>
+
+    <header id="head">
+      <h1>Sample Logo</h1>
+    </header>
+    <br><br>
+
+    <h1 style="color: red;">Hello web</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at, quod repellat, et, magnam possimus soluta
+      quaerat temporibus dolor nostrum repellendus molestiae veritatis ipsum voluptatibus eius? Nesciunt eos hic,
+      officiis sed quisquam, impedit excepturi modi commodi consequuntur a deleniti omnis, suscipit doloribus nisi sint
+      in beatae laudantium id voluptatibus repudiandae!
+    </p>
+    <br><br>
+
+    <div class="box1">
+      <h1>Sample Article</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti, odio, laborum debitis eum nam
+        laudantium quasi enim et fugit nobis, iure hic at incidunt quo. Eveniet aspernatur quae cum.</p>
+    </div>
+
+    <div class="box2">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint magnam nihil doloremque et numquam eum nisi
+        voluptas dolorem velit asperiores. Tempore dolorem quam consequuntur. Sequi inventore est reiciendis recusandae
+        qui?</p>
+    </div>
+
+    <div class="box">
+
+      <h1>Hello Box</h1>
+      <div class="box3">
+        <h1>Hello World</h1>
+
+      </div>
+
+
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, repudiandae deleniti, repellendus minus quia
+      maxime itaque cum quis voluptatibus eveniet aliquam ut aspernatur! Tempore unde quisquam ad ipsum provident
+      ratione.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates rem eaque velit voluptatum asperiores itaque
+      ea excepturi veniam officiis perspiciatis. Enim libero nam corrupti autem molestias ipsum, a fugit cupiditate.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, atque provident debitis, vitae odio
+      blanditiis ut amet unde eligendi, eaque doloremque. Quos distinctio eligendi facere corrupti facilis. Sit,
+      corporis pariatur?</p>
+
+    <ul>
+      <li>Lorem ipsum dolor sit.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet consectetur.</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+    </ul>
+
+    <div class="paray">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero velit eius possimus quisquam impedit illum
+        asperiores deleniti sed eum veniam!</p>
+    </div>
+
 
   </body>
 
