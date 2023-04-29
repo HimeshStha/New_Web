@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #081b29;
+        color: whitesmoke;
+        font-family: 'Nunito', sans-serif;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+      }
+
+      .logo {
+        position: relative;
+        font-size: 25px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .logo::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: .4s;
+      }
+
+      nav a {
+        text-decoration: none;
+        font-size: 18px;
+        color: whitesmoke;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: darkcyan;
+      }
+
+      .display-section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+      }
+
+      .dis-info {
+        max-width: 1500px;
+      }
+
+      .dis-info h1 {
+        position: relative;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .dis-info h1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1s;
+      }
+
+      .dis-info h3 {
+        position: relative;
+        font-size: 30px;
+        font-weight: 700;
+        color: teal;
+      }
+
+      .dis-info h3::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.3s;
+      }
+
+      .dis-info p {
+        position: relative;
+        font-size: 18px;
+        margin: 20px 0 40px;
+      }
+
+      .dis-info p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.6s;
+      }
+
+      .dis-info .btn-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height: 50px;
+      }
+
+      .dis-info .btn-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 1.9s;
+        z-index: 2;
+      }
+
+      .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background: turquoise;
+        border: 2px solid turquoise;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+      }
+
+      .btn-box a:hover {
+        color: turquoise;
+      }
+
+      .btn-box a:nth-child(2) {
+        background: transparent;
+        color: turquoise;
+      }
+
+      .btn-box a:nth-child(2)::before {
+        background: turquoise;
+      }
+
+      .btn-box a:nth-child(2):hover {
+        color: #081b29;
+      }
+
+      .btn-box a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #081b29;
+        z-index: -1;
+        transition: .5s;
+      }
+
+      .btn-box a:hover::before {
+        width: 100%;
+      }
+
+      .home-sci {
+        position: absolute;
+        bottom: 40px;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .home-sci::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 2.5s;
+        z-index: 2;
+      }
+
+      .home-sci a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #00abf0;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #00abf0;
+        text-decoration: none;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+      }
+
+      .home-sci a:hover {
+        color: #081b29;
+      }
+
+      .home-sci a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #00abf0;
+        z-index: -1;
+        transition: .5s;
+      }
+
+      .home-sci a:hover::before {
+        width: 100%;
+      }
+
+      .display-image img {
+        /* clip-path: circle();
+        filter: grayscale(0); */
+        filter: brightness(80%);
+        opacity: 75%;
+        height: 300px;
+        width: 300px;
+        border-radius: 15px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+      }
+
+      .home-imgHOver {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        width: 500px;
+        height: 82%;
+        background: transparent;
+        transition: 3s;
+        animation: manipActivehover .1s forwards;
+        animation-delay: 4s;
+        pointer-events: none;
+      }
+
+      .home-imgHOver:hover {
+        background: #081b29;
+        opacity: 0.8;
+      }
+
+      .home-imgHOver::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 90%;
+        height: 100%;
+        background: #081b29;
+        animation: showRight 1s ease forwards;
+        animation-delay: 3s;
+        z-index: 100;
+      }
+
+      /* KEYFRAMES ANIMATION */
+      @keyframes showRight {
+        100% {
+          width: 0;
+        }
+      }
+
+      @keyframes manipActivehover {
+        100% {
+          pointer-events: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="" class="logo">Himesh.</a>
+      <nav>
+        <a href="" class="active">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Services</a>
+      </nav>
+    </header>
+
+    <div class="display-section">
+      <div class="dis-info">
+        <h1>Hi, I'm Himesh Shrestha</h1>
+        <h3>Frontend Developer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem in delectus ipsam possimus, facere qui sequi
+          expedita enim sed, voluptate mollitia dicta perferendis accusamus blanditiis?</p>
+
+        <div class="btn-box">
+          <a href="">Hire Me</a>
+          <a href="">Let's Talk</a>
+        </div>
+      </div>
+      <div class="home-sci">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+      </div>
+
+      <div class="display-image">
+        <img src="assets/Himesh.2.jpg" alt="">
+      </div>
+      <span class="home-imgHOver"></span>
+
+
+    </div>
+
+  </body>
+
+</html>
